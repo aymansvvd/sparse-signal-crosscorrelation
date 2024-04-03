@@ -42,3 +42,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 This project was inspired by the need for robust cross-correlation methods in scenarios involving signals of different densities.
+
+## Contributors
+- Ayman (https://github.com/Aymansvvd)
+- Alex (https://github.com/Alexbernardino) 
