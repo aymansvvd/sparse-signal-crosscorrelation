@@ -33,7 +33,14 @@ To utilize this code:
 - numpy for numerical computations.
 - scikit-learn for Gaussian process regression.
 
-## Example
+## Example Explanation
+In this example, we generate a sine function (dense signal) and create a sparse signal by selecting a few points from the dense signal. The purpose of this example is to demonstrate the functionality of the interpolation and cross-correlation functions implemented in the code.
+### Purpose of the Example
+The generated sparse signal is initially identical (or barely shifted) to the original position of the sparse signal. Ideally, when calculating the correlation with lags, the biggest correlation value should be around lag 0, as the dense signal and the sparse signal are seamlessly the same (one is sparse, one is dense). However, we shift and scale the sparse signal to assess if the interpolation function and the cross-correlation function work correctly. 
+### Experimentation
+To experiment with the code, one can modify the values of the shifting and scaling of the sparse signal. By doing so, we can observe if the interpolation and cross-correlation calculations, as well as the visualization of the shifted sparse signal, are performed correctly.
+### Visual Assessment
+The final plot visually assesses if the maximum correlation value and corresponding lag are correct. In an accurate scenario, the peaks of the signals should match, indicating that the interpolation and cross-correlation functions have been implemented effectively.
 ### Example usage of the cross-correlation function
 correlation, lag_values, correlation_with_lag = cross_sparsedense(interpolated_sparse_signal, interpolated_sparse_time, dense_signal, dense_time, lag_max, sigma)
 
